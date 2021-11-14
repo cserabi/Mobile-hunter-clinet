@@ -1,0 +1,41 @@
+.header{
+  margin-top: 10px;
+}
+.btn-color
+{
+  background-color:#51ff00 ;
+  color:white;
+}
+.text-light-custom
+{
+  color:rgb(0, 62, 121);
+}
+.header nav a{
+  text-decoration: none;
+  margin-right: 20px;
+  color: black;
+  padding: 0 5px;
+  
+}
+.signup-right
+{
+  margin-left:20px;
+}
+.text-light-name
+{
+  color:white;
+}
+.header nav a:hover{
+  background-color: lightblue;
+  color: black;
+}
+.bg-color-design
+{
+  background-color: #004e81;
+}
+.profile-image
+{
+width: 40px;
+border-radius: 50%;
+margin-right:10px;
+}
