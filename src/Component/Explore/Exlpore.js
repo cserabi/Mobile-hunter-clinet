@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Purchase.css';
+import './Explore.css';
 
-const Purchase = ({ slice }) => {
+const Explore = ({ slice }) => {
   const [newproduct, setNewproduct] = useState([]);
 
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/purchase')
+    fetch('http://localhost:5000/products')
       .then(res => res.json())
 
       .then(data => setNewproduct(data))
@@ -35,7 +35,7 @@ const Purchase = ({ slice }) => {
                 <p className="card-text"> Warranty : {productlist.warranty}</p>
                 <p className="card-text"> price : {productlist.price} $</p>
 
-                <Link to='/order/add'><button className="btn btn-primary">Order Now</button> </Link>
+                <Link to={`/purchase/:${productlist._id}`}  ><button className="btn btn-primary">Order Now</button> </Link>
 
               </div>
             </div>
@@ -50,4 +50,4 @@ const Purchase = ({ slice }) => {
   );
 };
 
-export default Purchase;
+export default Explore;

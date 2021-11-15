@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Purchase from '../Explore/Purchase';
+import Explore from '../Explore/Exlpore';
+
 
 import './Home.css';
 
@@ -11,7 +12,7 @@ const Home = () => {
 
     <div>
       <Banner></Banner>
-      <Purchase slice={slice}></Purchase>
+      <Explore slice={slice}></Explore>
 
     </div>
   );

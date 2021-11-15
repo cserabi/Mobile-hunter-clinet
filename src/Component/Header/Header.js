@@ -27,10 +27,11 @@ const Header = () => {
             <Nav.Link className="text-light" as={Link} to="/topbanner">Top Banner</Nav.Link>
 
 
-            <Nav.Link className="text-light" as={Link} to="/purchase">Purchase</Nav.Link>
+            <Nav.Link className="text-light" as={Link} to="/explore">Explore</Nav.Link>
             <Nav.Link className="text-light" as={Link} to="/review">Review </Nav.Link>
             <Nav.Link className="text-light" as={Link} to="/faq">FAQ</Nav.Link>
-            <Nav.Link className="text-light" as={Link} to="/contactus">Dashboard</Nav.Link>
+
+            <Nav.Link className="text-light" as={Link} to="/dashboard">Dashboard</Nav.Link>
           </Nav>
           <Nav>
 
