@@ -66,10 +66,10 @@ function App() {
             </Route>
 
 
-            <Route path='/dashboard'>
+            <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
 
-            </Route>
+            </PrivateRoute>
             <Route path='/purchase/:id'>
               <Purchase></Purchase>
             </Route>
