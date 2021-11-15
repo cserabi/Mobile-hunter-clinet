@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Explore from '../Explore/Exlpore';
+import Review from '../Review/Review';
 
 
 import './Home.css';
@@ -13,6 +14,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Explore slice={slice}></Explore>
+      <Review></Review>
 
     </div>
   );

@@ -39,7 +39,7 @@ const Header = () => {
               !user?.email ?
                 <div className="d-flex">
                   <Nav.Link className="text-light-custom btn-color " as={Link} to="/login"> Login </Nav.Link>
-                  <Nav.Link className="text-light-custom btn-login px-3 btn-color signup-right" as={Link} to="/signup"> Signup </Nav.Link>
+                  <Nav.Link className="text-light-custom btn-login px-3 btn-color signup-right" as={Link} to="/Register"> Register </Nav.Link>
 
                 </div>
                 :

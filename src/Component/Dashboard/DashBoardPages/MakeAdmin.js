@@ -1,10 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ButtonGroup, Button, Alert } from 'react-bootstrap';
+import useAuth from '../../Hook/useAuth';
+import Dashboard from '../Dashboard';
 
 const MakeAdmin = () => {
-  return (
-    <div>
+  const [email, setEmail] = useState('');
+  const [success, setSuccess] = useState(false);
+  const { error } = useAuth();
 
-    </div>
+  const handleOnblur = e => {
+    setEmail(e.target.value);
+  }
+  const handleSubmit = e => {
+    const user = { email }
+    fetch('https://localhost:5000/users/admin', {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+
+    })
+      .then(res => res.json())
+      .then(data => {
+        setSuccess(true);
+        setEmail('')
+        console.log(data)
+      }
+
+      )
+
+
+    e.preventDefault();
+  }
+
+
+  return (
+    <Dashboard>
+      <div>
+        <form onSubmit={handleSubmit} >
+
+          <input onBlur={handleOnblur} type="email" name="email" placeholder="write your new admin email" />
+
+          <input type="submit" />
+
+        </form>
+
+
+        {success && <Alert variant="success"> Made Admin successfully!</Alert>}
+
+
+      </div>
+    </Dashboard>
   );
 };
 

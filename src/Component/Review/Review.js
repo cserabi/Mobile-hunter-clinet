@@ -9,19 +9,16 @@ const Review = () => {
   const [newReview, setnewReview] = useState([]);
 
 
-
-
-
-
   useEffect(() => {
 
     fetch('http://localhost:5000/reviews')
       .then(res => res.json())
       .then(data => setnewReview(data))
 
+
   }, [])
 
-  // delete an newReview
+
 
 
 

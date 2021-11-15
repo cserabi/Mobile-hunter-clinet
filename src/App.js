@@ -8,6 +8,7 @@ import PrivateRoute from './Component/Context/PrivateRoute';
 import Dashboard from './Component/Dashboard/Dashboard';
 import AddProducts from './Component/Dashboard/DashBoardPages/AddProducts';
 import AddReview from './Component/Dashboard/DashBoardPages/AddReview';
+import MakeAdmin from './Component/Dashboard/DashBoardPages/MakeAdmin';
 import MyOrder from './Component/Dashboard/DashBoardPages/MyOrder';
 import Pay from './Component/Dashboard/DashBoardPages/Pay';
 import Explore from './Component/Explore/Exlpore';
@@ -19,6 +20,7 @@ import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
+import Register from './Component/Login/Register';
 import Productadd from './Component/Productadd';
 import Purchase from './Component/Purchase/Purchase';
 import Review from './Component/Review/Review';
@@ -59,6 +61,10 @@ function App() {
               <Pay></Pay>
             </Route>
 
+            <Route path='/Register'>
+              <Register></Register>
+            </Route>
+
 
             <Route path='/dashboard'>
               <Dashboard></Dashboard>
@@ -80,6 +86,10 @@ function App() {
             </Route>
             <Route path='/addProducts'>
               <Productadd></Productadd>
+            </Route>
+
+            <Route path='/admin'>
+              <MakeAdmin></MakeAdmin>
             </Route>
 
             <Route path='/addreview'>
