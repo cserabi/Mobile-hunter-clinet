@@ -8,7 +8,7 @@ const Explore = ({ slice }) => {
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/products')
+    fetch('https://stark-stream-58994.herokuapp.com/products')
       .then(res => res.json())
 
       .then(data => setNewproduct(data))

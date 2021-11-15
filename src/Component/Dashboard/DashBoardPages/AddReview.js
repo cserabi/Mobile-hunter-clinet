@@ -25,7 +25,7 @@ const AddReview = () => {
     const newreview = { name, review, comment, user }
     // const newreview.user = user;
 
-    fetch('http://localhost:5000/reviews', {
+    fetch('https://stark-stream-58994.herokuapp.com/reviews', {
 
       method: 'POST',
       headers: {
