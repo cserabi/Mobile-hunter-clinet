@@ -68,7 +68,7 @@ const Review = () => {
 
 
 
-                        <div style={{ color: 'yellow' }}>
+                        <div style={{ color: '#ff3200' }}>
 
                           {
 
