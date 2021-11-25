@@ -15,9 +15,19 @@ const Review = () => {
       .then(res => res.json())
       .then(data => setnewReview(data))
 
-
+    console.log(newReview);
   }, [])
 
+
+  // const makeReview = (num) => {
+  //   const str = `<i class="fas fa-star"/>`
+  //   let newStr = ``
+  //   for (let i = 0; i <= num; i++) {
+  //     newStr += str;
+  //   }
+  //   document.getElementById("custom").innerHTML = str;
+
+  // }
 
 
 
@@ -53,7 +63,35 @@ const Review = () => {
                       <Carousel.Caption>
                         <h3 className="text-dark text-center ">{reviewer.name} </h3>
 
-                        <p className="text-dark text-center">{reviewer.review}</p>
+                        <p className="text-dark text-center">
+                        </p>
+
+
+
+                        <div style={{ color: 'yellow' }}>
+
+                          {
+
+                            reviewer.review === '1' ? <i class="fas fa-star" />
+                              : reviewer.review === '2' ? <div><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
+                                : reviewer.review === '3' ? <div><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
+                                  : reviewer.review === '4' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
+                                    : reviewer.review === '5' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
+                                      : <p style={{ color: 'red' }}>no rating found! </p>
+
+                          }
+                          {/* <div class="custom"></div> */}
+
+                        </div>
+
+
+
+
+
+
+
+
+
                         <h5 className="text-dark text-center"> " {reviewer.comment} " </h5>
 
                       </Carousel.Caption>
