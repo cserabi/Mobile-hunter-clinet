@@ -8,7 +8,7 @@ import './Home.css';
 
 
 const Home = () => {
-  const slice = 6;
+  const slice = 8;
   return (
 
     <div>

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
+import Dashboard from '../Dashboard';
 
 
 const AddProducts = () => {
@@ -40,7 +41,8 @@ const AddProducts = () => {
     e.preventDefault();
   }
   return (
-    <div>
+    <Dashboard>
+
 
 
       <div className="container">
@@ -109,7 +111,8 @@ const AddProducts = () => {
           <div className="col-md-3"></div>
         </div>
       </div>
-    </div >
+
+    </Dashboard>
   );
 
 };

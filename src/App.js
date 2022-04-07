@@ -3,12 +3,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Banner from './Component/Banner/Banner';
+import Contact from './Component/ContactUs/Contact';
 import AuthProvider from './Component/Context/AuthProvider';
 import PrivateRoute from './Component/Context/PrivateRoute';
 import Dashboard from './Component/Dashboard/Dashboard';
 import AddProducts from './Component/Dashboard/DashBoardPages/AddProducts';
 import AddReview from './Component/Dashboard/DashBoardPages/AddReview';
 import MakeAdmin from './Component/Dashboard/DashBoardPages/MakeAdmin';
+import ManageOrders from './Component/Dashboard/DashBoardPages/ManageOrders';
+import ManageProduct from './Component/Dashboard/DashBoardPages/ManageProduct';
 import MyOrder from './Component/Dashboard/DashBoardPages/MyOrder';
 import Pay from './Component/Dashboard/DashBoardPages/Pay';
 import Explore from './Component/Explore/Exlpore';
@@ -24,6 +27,7 @@ import Register from './Component/Login/Register';
 import Productadd from './Component/Productadd';
 import Purchase from './Component/Purchase/Purchase';
 import Review from './Component/Review/Review';
+import Subscriber from './Component/Subscriber/Subscriber';
 
 function App() {
   return (
@@ -70,12 +74,25 @@ function App() {
               <Dashboard></Dashboard>
 
             </PrivateRoute>
-            <Route path='/purchase/:id'>
+            <Route path="/purchase/:productId">
               <Purchase></Purchase>
+            </Route>
+            <Route path="/contactUs">
+              <Contact></Contact>
+
             </Route>
 
             <Route path='/review'>
               <Review></Review>
+
+            </Route>
+
+            <Route path="/manageProducts">
+              <ManageProduct></ManageProduct>
+            </Route>
+
+            <Route path="/manageOrders">
+              <ManageOrders></ManageOrders>
 
             </Route>
             <Route path='/faq'>
@@ -97,10 +114,11 @@ function App() {
 
             </Route>
 
+
           </Switch>
 
 
-
+          {/* <Subscriber></Subscriber> */}
 
 
 

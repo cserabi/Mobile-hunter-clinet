@@ -16,7 +16,7 @@ const Explore = ({ slice }) => {
   }, [])
   return (
     <div className="container-fluid">
-      <h4 className="text-center">Best Collection of Brands Smart Phone</h4>
+      <h4 className="text-center">Best Collection Brands of Smart Phone</h4>
       <div className="d-flex justify-content-center align-items-center flex-wrap">
 
 
@@ -35,7 +35,7 @@ const Explore = ({ slice }) => {
                 <p className="card-text"> Warranty : {productlist.warranty}</p>
                 <p className="card-text"> price : {productlist.price} $</p>
 
-                <Link to={`/purchase/:${productlist._id}`}  ><button className="btn btn-primary">Order Now</button> </Link>
+                <Link to={`/purchase/${productlist._id}`}  ><button className="btn btn-primary">Order Now</button> </Link>
 
               </div>
             </div>

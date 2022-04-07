@@ -1,0 +1,23 @@
+.input-mail
+{
+  margin-top: 150px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .subscriber-auto
+  {
+    width: 300px;
+    font-size: 12px;
+    margin-top: 150px;
+  }
+
+ .input-mail
+ {
+  border: 3px solid black;
+  width: 200px;
+  border-radius: 10px 0px 0px 10px;
+  height: 30px ;
+ }
+  
+}

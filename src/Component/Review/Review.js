@@ -34,14 +34,14 @@ const Review = () => {
 
   return (
     <div className="container-fluid">
-      <h4 className="text-center"> Client Recommendation and Feedback</h4>
+      <h4 className="text-center"> Client Recommendation and Experience </h4>
       <div className="d-flex justify-content-center align-items-center flex-wrap">
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-3"></div>
+            <div className="col-md-4"></div>
 
-            <div className="col-md-6">
+            <div className="col-md-4">
 
 
               <Carousel>
@@ -77,7 +77,7 @@ const Review = () => {
                                 : reviewer.review === '3' ? <div><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
                                   : reviewer.review === '4' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
                                     : reviewer.review === '5' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
-                                      : <p style={{ color: 'red' }}>no rating found! </p>
+                                      : <p style={{ color: '#ff3200' }}>no review found </p>
 
                           }
                           {/* <div class="custom"></div> */}
@@ -111,7 +111,7 @@ const Review = () => {
             </div>
 
 
-            <div className="col-md-3"></div>
+            <div className="col-md-4"></div>
 
           </div>
 

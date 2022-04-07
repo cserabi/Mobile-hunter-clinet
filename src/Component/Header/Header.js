@@ -24,7 +24,7 @@ const Header = () => {
           <Nav className="me-auto ">
 
             <Nav.Link className="text-light" as={Link} to="/home">Home</Nav.Link>
-            <Nav.Link className="text-light" as={Link} to="/topbanner">Top Banner</Nav.Link>
+            {/* <Nav.Link className="text-light" as={Link} to="/topbanner">Top Banner</Nav.Link> */}
 
 
             <Nav.Link className="text-light" as={Link} to="/explore">Explore</Nav.Link>
@@ -32,6 +32,8 @@ const Header = () => {
             <Nav.Link className="text-light" as={Link} to="/faq">FAQ</Nav.Link>
 
             <Nav.Link className="text-light" as={Link} to="/dashboard">Dashboard</Nav.Link>
+
+            <Nav.Link className="text-light" as={Link} to="/contactUs">Contact Us</Nav.Link>
           </Nav>
           <Nav>
 
