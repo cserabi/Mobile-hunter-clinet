@@ -3,8 +3,6 @@ import { Carousel } from 'react-bootstrap';
 import './Review.css';
 
 
-
-
 const Review = () => {
   const [newReview, setnewReview] = useState([]);
 
@@ -83,12 +81,6 @@ const Review = () => {
                           {/* <div class="custom"></div> */}
 
                         </div>
-
-
-
-
-
-
 
 
 
