@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Redirect } from 'react-router-dom';
-import { useParams } from 'react-router';
+
 import useAuth from '../Hook/useAuth';
 import './Purchase.css';
+import { Link } from 'react-router-dom';
+import Payment from '../Payment/Payment';
+import { useParams } from 'react-router-dom';
+
 
 const Purchase = () => {
   const { user } = useAuth();
@@ -14,13 +18,14 @@ const Purchase = () => {
   const [orders, setOrders] = useState([]);
 
 
-
   useEffect(() => {
-    fetch('https://stark-stream-58994.herokuapp.com/products')
+    fetch('http://localhost:5000/products')
       .then(res => res.json())
       .then(data => setproducts(data))
   }, [])
 
+
+  console.log(productId);
   useEffect(() => {
     const foundproducts = products.find(product => product._id === productId);
     setSingleService(foundproducts);
@@ -45,6 +50,10 @@ const Purchase = () => {
         if (res) {
           setOrders([]);
           alert('Order Successfully');
+
+
+
+          <Redirect to='/pay' />
           //reset();
         }
       })
@@ -74,7 +83,7 @@ const Purchase = () => {
             <div className="card-body">
               <h5 className="card-title">{singleService?.name}</h5>
               <p className="card-text">{singleService?.description}</p>
-              <p className="card-text"><small className="text-muted">Price : $ <strong>{singleService?.price}</strong></small></p>
+              <p className="card-text"><small className="text-muted">Price : <strong>{singleService?.price} Tk</strong></small></p>
             </div>
           </div>
 
@@ -83,11 +92,16 @@ const Purchase = () => {
               <input defaultValue={user.displayName} {...register("name")} /> <br />
               <input placeholder="email" defaultValue={user.email} {...register("email", { required: true })} /> <br />
               {errors.email && <span className="error">This field is required</span>} <br />
+
+              <input type='date' placeholder="Order Date" defaultValue="" {...register("date", { required: true })} required /> <br />
               <input placeholder="Address" defaultValue="" {...register("Address", { required: true })} /> <br />
               {errors.Address && <span>Address is required </span>}
+
               <input placeholder="phone number" defaultValue="" {...register("Phone", { required: true })} required /> <br />
 
-              <input value="Confirm Order" className='confirm-button' type="submit"></input>
+              <input value="Confirm Order" className='confirm-button' type="submit" to="/Payment"></input>
+
+
             </form>
           </div>
         </div>

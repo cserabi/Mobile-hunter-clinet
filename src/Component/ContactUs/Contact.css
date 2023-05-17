@@ -1,25 +1,23 @@
-
-.bg-custom-pink
-{
-  background-color: #004E81 !important;
-  color:white;
+.bg-custom-pink {
+  background-color: #004FF9 !important;
+  color: white;
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 
 
-.submit-btn
-{
-  background-color:#00FE24;
-  color:black !important;
+.submit-btn {
+  background-color: #000000;
+  color: rgb(255, 255, 255) !important;
   font-weight: 600;
   border: 0px;
   margin-left: 3%;
   margin-bottom: 15px;
 }
-.submit-btn:hover{
+
+.submit-btn:hover {
   background-color: white !important;
-  color:#004E81 !important;
+  color: #004FF9 !important;
 
 }

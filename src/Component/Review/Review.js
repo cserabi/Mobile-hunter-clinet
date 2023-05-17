@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import useAuth from '../Hook/useAuth';
 import './Review.css';
 
 
 const Review = () => {
   const [newReview, setnewReview] = useState([]);
 
-
+  const { user, logOut } = useAuth();
   useEffect(() => {
 
-    fetch('https://stark-stream-58994.herokuapp.com/reviews')
+    fetch('http://localhost:5000/reviews')
       .then(res => res.json())
       .then(data => setnewReview(data))
 
@@ -61,21 +62,23 @@ const Review = () => {
                       <Carousel.Caption>
                         <h3 className="text-dark text-center ">{reviewer.name} </h3>
 
+
+
                         <p className="text-dark text-center">
                         </p>
 
 
 
-                        <div style={{ color: '#ff3200' }}>
+                        <div style={{ color: '#ff3700' }}>
 
                           {
 
-                            reviewer.review === '1' ? <i class="fas fa-star" />
-                              : reviewer.review === '2' ? <div><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
+                            reviewer.review === '1' ? <div> <i class="fas fa-star" /></div>
+                              : reviewer.review === '2' ? <div><i class="fas fa-star" /> <i class="fas fa-star" /></div>
                                 : reviewer.review === '3' ? <div><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
                                   : reviewer.review === '4' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
                                     : reviewer.review === '5' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
-                                      : <p style={{ color: '#ff3200' }}>no review found </p>
+                                      : <p style={{ color: '#ff3700' }}>no review found </p>
 
                           }
                           {/* <div class="custom"></div> */}

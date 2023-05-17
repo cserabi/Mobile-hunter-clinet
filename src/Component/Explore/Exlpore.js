@@ -8,12 +8,13 @@ const Explore = ({ slice }) => {
 
   useEffect(() => {
 
-    fetch('https://stark-stream-58994.herokuapp.com/products')
+    fetch('http://localhost:5000/products')
       .then(res => res.json())
 
       .then(data => setNewproduct(data))
 
-  }, [])
+  }, []);
+
   return (
     <div className="container-fluid">
       <h4 className="text-center">Best Collection Brands of Smart Phone</h4>
@@ -33,7 +34,7 @@ const Explore = ({ slice }) => {
                 <p className="card-text font-bold"> Mobile Name : {productlist.Name}</p>
                 <p className="card-text"> Description : {productlist.des}</p>
                 <p className="card-text"> Warranty : {productlist.warranty}</p>
-                <p className="card-text"> price : {productlist.price} $</p>
+                <p className="card-text"> price : {productlist.price} Tk</p>
 
                 <Link to={`/purchase/${productlist._id}`}  ><button className="btn btn-primary">Order Now</button> </Link>
 

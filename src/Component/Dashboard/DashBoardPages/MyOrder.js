@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Button, Spinner } from 'react-bootstrap';
 import Dashboard from '../Dashboard';
 import useAuth from '../../Hook/useAuth';
+import './MyOrder.css';
+import { Link } from 'react-router-dom';
 
 const MyOrder = () => {
 
@@ -30,24 +32,31 @@ const MyOrder = () => {
     setMyOrders(ownOrder);
   })
 
-  const modalShow = id => {
-    setShow(true);
-  }
+
 
   //cancel personal Orders 
   const handleDelete = id => {
-    const url = `http://localhost:5000/orders/${id}`;
-    fetch(url, {
-      method: 'DELETE'
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.deletedCount) {
-          const remaining = myOrders.filter(myBook => myBook._id !== id);
-          setorders(remaining);
-          setShow(false)
+
+    const proceed = window.confirm('Are you sure , you want to delete?');
+
+    // console.log(id);
+    if (proceed) {
+      const url = `http://localhost:5000/orders/${id}`;
+      fetch(url, {
+        method: 'DELETE'
+      })
+
+        .then(res => res.json())
+        .then(data => {
+          if (data.deletedCount > 0) {
+            alert('Order cancel successfully');
+            const remaining = myOrders.filter(myBook => myBook._id !== id);
+            setMyOrders(remaining);
+
+          }
         }
-      });
+        );
+    }
   }
 
 
@@ -68,17 +77,25 @@ const MyOrder = () => {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">{mybook.name}</h5>
-                  <h5>Email: {mybook.email}</h5>
+                  {/* <h5>Email: {mybook.email}</h5> */}
 
                   <p>Orders Id: {mybook._id}</p>
-                  <p className="card-text">Address: {mybook.Address}</p>
                   <p>Phone Number : {mybook.Phone}</p>
+                  <p className="card-text">Address: {mybook.Address}</p>
+
+
+                  <p className="card-text"> Booking Date: {mybook.date}</p>
+
+                  {/* {mybook.status === 'pending'} */}
+
+                  <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary">Delivery Status</button> </Link>
                   <p>Status: {mybook.status}</p>
                   <div className="">
-                    <button onClick={() => modalShow(mybook._id)} className="me-5 btn btn-primary">Cancel Orders</button>
+                    <button onClick={() => handleDelete(mybook._id)} className="me-5 btn btn-primary">Cancel Orders</button>
+                    <button className="me-5 btn btn-pay" >Pay</button>
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <Modal show={show} onHide={handleClose}>
                     <Modal.Body>Are you sure to want to cancel your Orders ?</Modal.Body>
                     <Modal.Footer>
@@ -90,11 +107,11 @@ const MyOrder = () => {
                       </Button>
                     </Modal.Footer>
                   </Modal>
-                </div>
+                </div> */}
 
               </div>
             </div>
-            )
+            ).reverse()
           }
         </div>
       </div>

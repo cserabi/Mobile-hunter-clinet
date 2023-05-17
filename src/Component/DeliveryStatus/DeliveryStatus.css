@@ -1,0 +1,16 @@
+.tb-design {
+  background-color: rgb(235, 235, 235) !important;
+  border: 1px solid #004FF9;
+  color: black;
+  text-align: left;
+}
+
+.btn-design {
+  background-color: #FF0044 !important;
+  color: white;
+}
+
+.btn-design:hover {
+  background-color: #004FF9 !important;
+  color: white;
+}

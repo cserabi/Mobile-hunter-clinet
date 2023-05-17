@@ -20,7 +20,7 @@ const Productadd = () => {
 
     const newProduct = { Name, des, price, warranty, piclink }
 
-    fetch('https://stark-stream-58994.herokuapp.com/addProducts', {
+    fetch('http://localhost:5000/addProducts', {
 
       method: 'POST',
       headers: {
@@ -32,8 +32,14 @@ const Productadd = () => {
 
       .then(res => res.json())
       .then(data => {
-        if (data.insertedId > 0) {
+        console.log(data)
+        if (data.insertedId) {
           alert('successfully added new product');
+          e.target.reset();
+        }
+
+        else {
+          alert('failed to add product');
           e.target.reset();
         }
       })

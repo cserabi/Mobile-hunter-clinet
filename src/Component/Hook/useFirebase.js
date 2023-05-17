@@ -16,7 +16,7 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   useEffect(() => {
-    fetch(`https://stark-stream-58994.herokuapp.com/users/${user.email}`)
+    fetch(`http://localhost:5000/users/${user.email}`)
       .then(res => res.json())
       .then(data => setAdmin(data.admin))
 
@@ -50,7 +50,7 @@ const useFirebase = () => {
   //common method function
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('https://stark-stream-58994.herokuapp.com/users', {
+    fetch('http://localhost:5000/users', {
       method: method,
       headers: {
         'content-type': 'application/json'

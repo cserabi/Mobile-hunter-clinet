@@ -21,7 +21,7 @@ const AddProducts = () => {
 
     const newProduct = { name, des, price, warranty, piclink }
 
-    fetch('https://stark-stream-58994.herokuapp.com/addProducts', {
+    fetch('http://localhost:5000/addProducts', {
 
       method: 'POST',
       headers: {

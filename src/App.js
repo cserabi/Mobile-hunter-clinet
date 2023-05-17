@@ -14,10 +14,8 @@ import ManageOrders from './Component/Dashboard/DashBoardPages/ManageOrders';
 import ManageProduct from './Component/Dashboard/DashBoardPages/ManageProduct';
 import MyOrder from './Component/Dashboard/DashBoardPages/MyOrder';
 import Pay from './Component/Dashboard/DashBoardPages/Pay';
+import DeliveryStatus from './Component/DeliveryStatus/DeliveryStatus';
 import Explore from './Component/Explore/Exlpore';
-
-
-
 import FAQ from './Component/FAQ/FAQ';
 import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
@@ -27,7 +25,6 @@ import Register from './Component/Login/Register';
 import Productadd from './Component/Productadd';
 import Purchase from './Component/Purchase/Purchase';
 import Review from './Component/Review/Review';
-import Subscriber from './Component/Subscriber/Subscriber';
 
 function App() {
   return (
@@ -100,6 +97,10 @@ function App() {
             </Route>
             <Route path='/myorder'>
               <MyOrder></MyOrder>
+            </Route>
+            <Route path='/deliverystatus/:OrderId'>
+              <DeliveryStatus></DeliveryStatus>
+
             </Route>
             <Route path='/addProducts'>
               <Productadd></Productadd>

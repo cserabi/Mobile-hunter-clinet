@@ -87,11 +87,11 @@ const ManageOrders = () => {
 
                   <td>{list.status}</td>
                   <td>
-                    <button className=" btn btn-danger" onClick={() => modalShow(list._id)}>Cancel</button>
+                    <button className=" btn btn-danger" onClick={() => handleDelete(list._id)}>Cancel</button>
                     <button onClick={() => handleUpdateStatus(list._id)} className="btn btn-success ms-4"> Shipped</button>
                   </td>
 
-                  <Modal show={show} onHide={handleClose}>
+                  {/* <Modal show={show} onHide={handleClose}>
                     <Modal.Body>Are you sure to want to cancel this booking service ?</Modal.Body>
                     <Modal.Footer>
                       <Button variant="secondary" onClick={handleClose}>
@@ -101,9 +101,9 @@ const ManageOrders = () => {
                         Confirm
                       </Button>
                     </Modal.Footer>
-                  </Modal>
+                  </Modal> */}
                 </tr>
-              ))
+              )).reverse()
             }
           </tbody>
         </Table>

@@ -10,8 +10,8 @@ const Footer = () => {
 
         <div className="col-md-3">
           <p><i class="fas fa-phone-alt"></i> 01792181248 (24/7 )<br />
-            <i class="fas fa-envelope"></i> mobilehunter@gmail.com <br />
-            <i class="fas fa-map-marker-alt"></i> 423 street Road , Daya , Shahjadpur , Bangladesh</p>
+            <i class="fas fa-envelope"></i> techmart@gmail.com <br />
+            <i class="fas fa-map-marker-alt"></i> 235 Dr. Wajed Miah Building , CSE , HSTU , Bangladesh</p>
           <img src="https://i.postimg.cc/VNWxxj2x/Screenshot-25.png" alt="" />
         </div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
         <div className="col-md-4 text-center">
-          <h5>Copyright &copy; 2021 Mobile Hunter , Bangladesh</h5>
+          <h5>Copyright &copy; 2023 TechMart , Bangladesh</h5>
         </div>
 
         <div className="col-md-4">
