@@ -14,7 +14,9 @@ import ManageOrders from './Component/Dashboard/DashBoardPages/ManageOrders';
 import ManageProduct from './Component/Dashboard/DashBoardPages/ManageProduct';
 import MyOrder from './Component/Dashboard/DashBoardPages/MyOrder';
 import Pay from './Component/Dashboard/DashBoardPages/Pay';
+import UpdateStatus from './Component/Dashboard/DashBoardPages/UpdateStatus';
 import DeliveryStatus from './Component/DeliveryStatus/DeliveryStatus';
+import MiddleStatus from './Component/DeliveryStatus/MiddleStatus';
 import Explore from './Component/Explore/Exlpore';
 import FAQ from './Component/FAQ/FAQ';
 import Footer from './Component/Footer/Footer';
@@ -94,6 +96,16 @@ function App() {
             </Route>
             <Route path='/faq'>
               <FAQ></FAQ>
+            </Route>
+
+            <Route path="/middleStatus/:middleId">
+              <MiddleStatus></MiddleStatus>
+
+            </Route>
+
+            <Route path="/updateStatus/:statusId">
+              <UpdateStatus></UpdateStatus>
+
             </Route>
             <Route path='/myorder'>
               <MyOrder></MyOrder>

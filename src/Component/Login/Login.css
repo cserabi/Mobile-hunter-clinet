@@ -1,0 +1,9 @@
+.submit-btn {
+  margin-top: 25px !important;
+  margin: auto;
+}
+
+.submit-btn:hover {
+  background-color: #FF0044 !important;
+  color: white !important;
+}

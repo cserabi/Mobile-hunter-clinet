@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Table, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Dashboard from '../Dashboard';
 
 const ManageOrders = () => {
@@ -88,7 +89,9 @@ const ManageOrders = () => {
                   <td>{list.status}</td>
                   <td>
                     <button className=" btn btn-danger" onClick={() => handleDelete(list._id)}>Cancel</button>
-                    <button onClick={() => handleUpdateStatus(list._id)} className="btn btn-success ms-4"> Shipped</button>
+                    <Link to={`/updateStatus/${list._id}`}  ><button className="btn btn-primary">Status</button> </Link>
+
+                    {/* <button onClick={() => handleUpdateStatus(list._id)} className="btn btn-success ms-4"> Shipped</button> */}
                   </td>
 
                   {/* <Modal show={show} onHide={handleClose}>
