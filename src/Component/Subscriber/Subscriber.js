@@ -10,6 +10,8 @@ const Subscriber = () => {
 
       <div >
         <Form className='subscriber-auto' >
+          
+          Subscriber part
           <label>
 
             <input className='input-mail' type="text" name="mail" placeholder='  Enter your email adress and subscribe for getting more update' style={{ border: '3px solid #004E81', width: '500px', borderRadius: '10px 0px 0px 10px', height: '42px' }} />
