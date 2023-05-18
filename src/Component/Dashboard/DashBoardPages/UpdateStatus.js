@@ -11,17 +11,17 @@ const UpdateStatus = () => {
   const statusDate = useRef();
   const lastStatus = useRef();
   const vehicleName = useRef();
-  const siNo = useRef();
+  const phoneNo = useRef();
 
   const handleAddUser = e => {
 
     const date = statusDate.current.value;
     const last = lastStatus.current.value;
     const vehicle = vehicleName.current.value;
-    const si = siNo.current.value;
+    const phone = phoneNo.current.value;
 
-    const updateInfo = { date, last, vehicle, si }
-
+    const updateInfo = { date, last, vehicle, phone }
+          console.log(updateInfo);
 
 
     fetch(`http://localhost:5000/status/${statusId}`, {
@@ -91,10 +91,10 @@ const UpdateStatus = () => {
                   id="floatingPasswordCustom"
                   type="text"
                   placeholder="Si no "
-                  ref={siNo}
+                  ref={phoneNo}
                   required
                 />
-                <label htmlFor="floatingPasswordCustom">Si No</label>
+                <label htmlFor="floatingPasswordCustom">Phone  No</label>
               </Form.Floating>
 
               <input type="submit" value="Update" className="btn btn-primary btn-organization p-3 w-100 mb-3 bookbtn" />

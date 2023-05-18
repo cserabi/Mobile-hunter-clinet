@@ -62,6 +62,7 @@ const ManageOrders = () => {
         }
       })
   }
+  let orderNo=1;
 
   return (
     <Dashboard>
@@ -71,20 +72,22 @@ const ManageOrders = () => {
           <thead>
             <tr>
               {/* <th>#</th> */}
+              <th>Order No </th>
               <th>Name</th>
               <th>Email</th>
-              <th>Order Id</th>
+              <th>Mobile</th>
               <th>Status</th>
-
             </tr>
           </thead>
           <tbody>
-            {
+           
+            {      
               allOrders.map((list) => (
-                <tr>
+                <tr> 
+                  <td>{orderNo++}</td>
                   <td>{list.name}</td>
                   <td>{list.email}</td>
-                  <td>{list._id}</td>
+                  <td>{list.Phone}</td>
 
                   <td>{list.status}</td>
                   <td>
@@ -105,6 +108,7 @@ const ManageOrders = () => {
                       </Button>
                     </Modal.Footer>
                   </Modal> */}
+                 
                 </tr>
               )).reverse()
             }

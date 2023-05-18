@@ -58,6 +58,8 @@ const AddProducts = () => {
                   type="Text"
                   placeholder="name@example.com"
                   ref={nameRef}
+                  required
+
                 />
                 <label htmlFor="floatingInputCustom">Write your Product Name</label>
               </Form.Floating>
