@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CloseButton, Table } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './DeliveryStatus.css';
 
 
@@ -107,6 +107,7 @@ const DeliveryStatus = () => {
 
 
         </div>
+        <Link to={`/middleStatus/${SingleOrder?._id}`} ><button className="btn btn-primary"> Middle Status</button> </Link>
         <div className="col-md-2"></div>
 
 
