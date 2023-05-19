@@ -1,13 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import { Form } from 'react-bootstrap';
 
 const Productadd = () => {
+ 
 
   const nameRef = useRef();
   const desRef = useRef();
   const priceRef = useRef();
   const warrantyRef = useRef();
-  const piclinkRef = useRef();
+  const piclinkRef = useRef('');
 
   const handleAddUser = e => {
 
@@ -16,9 +17,11 @@ const Productadd = () => {
     const price = priceRef.current.value;
     const warranty = warrantyRef.current.value;
     const piclink = piclinkRef.current.value;
+    
 
 
-    const newProduct = { Name, des, price, warranty, piclink }
+    const newProduct = { Name, des, price, warranty ,piclink}
+    console.log(newProduct);
 
     fetch('http://localhost:5000/addProducts', {
 
@@ -106,7 +109,7 @@ const Productadd = () => {
 
                 <Form.Control
                   id="floatingPasswordCustom"
-                  type="number"
+                  type="text"
                   placeholder="text"
                   ref={piclinkRef}
                 />

@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
 
     <div className='col-md-3 col-sm-12'>
-      <ul className='list-group sticky-top  py-2'>
+      <ul className='list-group sticky-top  py-2 position-sticky'>
 
         {!admin && <div>
 

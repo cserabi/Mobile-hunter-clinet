@@ -17,7 +17,7 @@ const Dashboard = ({ children }) => {
       </Navbar>
 
 
-      <div className="container my-4">
+      <div className="container my-4   position-sticky">
         <div className="row">
           <Sidebar></Sidebar>
           <div className="col-md-9 my-2">
