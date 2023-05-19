@@ -1,13 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import { Form } from 'react-bootstrap';
 
 const Productadd = () => {
+ 
 
   const nameRef = useRef();
   const desRef = useRef();
   const priceRef = useRef();
   const warrantyRef = useRef();
-  const piclinkRef = useRef();
+  const piclinkRef = useRef('');
 
   const handleAddUser = e => {
 
@@ -16,9 +17,11 @@ const Productadd = () => {
     const price = priceRef.current.value;
     const warranty = warrantyRef.current.value;
     const piclink = piclinkRef.current.value;
+    
 
 
-    const newProduct = { Name, des, price, warranty, piclink }
+    const newProduct = { Name, des, price, warranty ,piclink}
+    console.log(newProduct);
 
     fetch('http://localhost:5000/addProducts', {
 
@@ -62,6 +65,7 @@ const Productadd = () => {
                   type="Text"
                   placeholder="name@example.com"
                   ref={nameRef}
+                  required
                 />
                 <label htmlFor="floatingInputCustom">Write your Product Name</label>
               </Form.Floating>
@@ -71,6 +75,7 @@ const Productadd = () => {
                   type="text"
 
                   ref={desRef}
+                  required
 
                 />
 
@@ -81,9 +86,11 @@ const Productadd = () => {
 
                 <Form.Control
                   id="floatingPasswordCustom"
-                  type="text"
+                  type="number"
                   placeholder="text"
                   ref={priceRef}
+                  required
+                  min="999"
                 />
                 <label htmlFor="floatingPasswordCustom">Write your Product price </label>
               </Form.Floating>
@@ -94,6 +101,7 @@ const Productadd = () => {
                   type="text"
                   placeholder="text"
                   ref={warrantyRef}
+                  required
                 />
                 <label htmlFor="floatingPasswordCustom">Write your Product warranty time </label>
               </Form.Floating>
