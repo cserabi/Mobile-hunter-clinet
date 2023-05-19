@@ -60,17 +60,19 @@ const AddReview = () => {
                   type="Text"
                   placeholder="name@example.com"
                   ref={nameRef}
+                  required
                 />
                 <label htmlFor="floatingInputCustom">Write your Name</label>
               </Form.Floating>
               <Form.Floating className="mb-3">
                 <Form.Control
                   id="floatingPasswordCustom"
-                  type="text"
+                  type="number"
                   placeholder="Password"
                   ref={ratingRef}
-
-
+                  required
+                  max="5"
+                  min="0"
                 />
 
 
@@ -85,6 +87,7 @@ const AddReview = () => {
                   type="text"
                   placeholder="text"
                   ref={commentRef}
+                  required
                 />
                 <label htmlFor="floatingPasswordCustom">Write your comment about work experience </label>
               </Form.Floating>

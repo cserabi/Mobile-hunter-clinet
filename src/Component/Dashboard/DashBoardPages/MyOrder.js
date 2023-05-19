@@ -26,11 +26,14 @@ const MyOrder = () => {
       }
       )
   }, [])
+  
 
   useEffect(() => {
     const ownOrder = orders.filter(order => order.email === user?.email);
     setMyOrders(ownOrder);
   })
+
+
 
 
 
@@ -72,8 +75,7 @@ const MyOrder = () => {
             spinner && <Spinner className="mx-auto" animation="border" variant="dark" />
           }
           {
-            myOrders.map(mybook => <div className="col"
-              key={mybook._id} >
+            myOrders.map(mybook => <div className="col" key={mybook._id} >
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title">{mybook.name}</h5>

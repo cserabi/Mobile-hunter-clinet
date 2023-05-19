@@ -62,6 +62,7 @@ const Productadd = () => {
                   type="Text"
                   placeholder="name@example.com"
                   ref={nameRef}
+                  required
                 />
                 <label htmlFor="floatingInputCustom">Write your Product Name</label>
               </Form.Floating>
@@ -71,6 +72,7 @@ const Productadd = () => {
                   type="text"
 
                   ref={desRef}
+                  required
 
                 />
 
@@ -81,9 +83,11 @@ const Productadd = () => {
 
                 <Form.Control
                   id="floatingPasswordCustom"
-                  type="text"
+                  type="number"
                   placeholder="text"
                   ref={priceRef}
+                  required
+                  min="999"
                 />
                 <label htmlFor="floatingPasswordCustom">Write your Product price </label>
               </Form.Floating>
@@ -94,6 +98,7 @@ const Productadd = () => {
                   type="text"
                   placeholder="text"
                   ref={warrantyRef}
+                  required
                 />
                 <label htmlFor="floatingPasswordCustom">Write your Product warranty time </label>
               </Form.Floating>
@@ -101,7 +106,7 @@ const Productadd = () => {
 
                 <Form.Control
                   id="floatingPasswordCustom"
-                  type="text"
+                  type="number"
                   placeholder="text"
                   ref={piclinkRef}
                 />
