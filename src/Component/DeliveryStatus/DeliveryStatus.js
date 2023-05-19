@@ -64,7 +64,7 @@ const DeliveryStatus = () => {
             <tbody>
               <tr>
                 <td>Booking From</td>
-                <td>Department of CSE , HSTU</td>
+                <td>Techmart, HSTU</td>
               </tr>
             </tbody>
 

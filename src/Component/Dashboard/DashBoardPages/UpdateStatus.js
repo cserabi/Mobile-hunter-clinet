@@ -21,7 +21,7 @@ const UpdateStatus = () => {
     const phone = phoneNo.current.value;
 
     const updateInfo = { date, last, vehicle, phone }
-          console.log(updateInfo);
+          
 
 
     fetch(`http://localhost:5000/status/${statusId}`, {

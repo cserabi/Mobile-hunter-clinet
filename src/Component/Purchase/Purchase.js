@@ -36,8 +36,11 @@ const Purchase = () => {
     console.log(data);
     const serviceData = {
       ...data,
-      status: 'pending'
+      status: 'pending',
+      deviceName:singleService?.Name,
+      price:singleService?.price
     };
+    console.log(serviceData);
     const url = 'http://localhost:5000/orders';
     fetch(url, {
       method: "POST",
