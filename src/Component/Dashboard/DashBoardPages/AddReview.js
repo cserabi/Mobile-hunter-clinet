@@ -92,7 +92,7 @@ const AddReview = () => {
                 <label htmlFor="floatingPasswordCustom">Write your comment about work experience </label>
               </Form.Floating>
 
-              <input to='/addreview' type="submit" value="Submit" className="btn btn-primary btn-organization p-3 w-100 mb-3" />
+              <input to='/' type="submit" value="Submit" className="btn btn-primary btn-organization p-3 w-100 mb-3" />
             </Form>
 
           </div>
