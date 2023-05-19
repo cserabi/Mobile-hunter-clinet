@@ -125,7 +125,7 @@ function App() {
               <Productadd></Productadd>
             </Route>
 
-            <Route path='/admin'>
+            <Route path='/makeAdmin'>
               <MakeAdmin></MakeAdmin>
             </Route>
 

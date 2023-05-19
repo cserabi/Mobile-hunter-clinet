@@ -24,7 +24,7 @@ const Sidebar = () => {
           <Nav.Link className='list-group-item' as={Link} to="/manageOrders">Manage All Orders</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/addProducts">Add a Products</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/manageProducts">Manage Products</Nav.Link>
-          <Nav.Link className='list-group-item' as={Link} to="/admin">Make Admin</Nav.Link>
+          <Nav.Link className='list-group-item' as={Link} to="/makeAdmin">Make Admin</Nav.Link>
 
           <button style={{ width: '100%', textAlign: 'left' }} className="list-group-item" onClick={() => logOut()}>Logout</button>
 
