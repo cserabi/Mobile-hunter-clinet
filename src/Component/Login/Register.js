@@ -48,7 +48,7 @@ const Register = () => {
             onBlur={handleOnBlur}
             name='name'
             type='name'
-            style={{ marginBottom: '1vw', width: '20%' }}
+            style={{ marginBottom: '1vw', width: '15%' }}
             defaultValue="name" />
           <br />
 
@@ -56,7 +56,7 @@ const Register = () => {
             name='email'
             type='email'
             onBlur={handleOnBlur}
-            style={{ width: '20%' }}
+            style={{ width: '15%', marginBottom: '1vw' }}
             placeholder="Email" /><br />
           {/* {error.email && <span>This field is required</span>}<br /> */}
 
@@ -64,7 +64,7 @@ const Register = () => {
             name='password'
             type='password'
             onBlur={handleOnBlur}
-            style={{ width: '20%' }}
+            style={{ width: '15%', marginBottom: '1vw' }}
             placeholder="Password" /><br />
           {/* {error.password && <span>This field is required</span>}<br /> */}
 
@@ -72,18 +72,18 @@ const Register = () => {
             name='password2'
             type='password'
             onBlur={handleOnBlur}
-            style={{ width: '20%' }}
+            style={{ width: '15%', marginBottom: '1vw' }}
             placeholder="Re-enter Password" /><br />
           {/* {error.password2 && <span>This field is required</span>}<br /> */}
 
           <input
             className="mb-3"
-            style={{ width: '20%', backgroundColor: '#004E81', border: 'none', padding: '10px', borderRadius: '5px', color: 'white' }}
+            style={{ width: '15%', backgroundColor: '#FF0044', fontWeight: 'bold', border: 'none', padding: '10px', borderRadius: '5px', color: 'white' }}
             type="submit" />
         </form>
         <NavLink to="/login">
-          <span>Already Registered?</span>
-          <button style={{ border: 'none', backgroundColor: '#004E81', color: 'white', marginLeft: '20px' }} className=""> Please Login</button>
+          <span style={{ fontWeight: 'bold', textDecoration: 'none' }}>Already Registered?</span>
+          <button style={{ border: 'none', backgroundColor: '#004ff9', color: 'white', marginLeft: '20px', fontWeight: '400px' }} className=""> Please Login</button>
         </NavLink>
         {/* {isLoading && <Spinner animation="border" />} */}
         {user?.email && <Alert variant="success"> User Created successfully!</Alert>}
@@ -92,7 +92,7 @@ const Register = () => {
       </div>
 
       <div className="text-center my-5 py-5">
-        <button onClick={signInWithGoogle} className=" mx-auto py-2 px-4" style={{ backgroundColor: '#004E81', border: '0px', borderRadius: '10px', color: 'white', fontWeight: '500' }}><img src='https://i.postimg.cc/pX3LGnng/66893-guava-logo-google-plus-suite-png-image-high-quality.png' style={{ height: '50px' }} /><i className="bi bi-google me-4"></i>Continue with Google</button>
+        <button onClick={signInWithGoogle} className=" mx-auto py-2 px-4" style={{ backgroundColor: '#004ff9', border: '0px', borderRadius: '10px', color: 'white', fontWeight: '500' }}><img src='https://i.postimg.cc/pX3LGnng/66893-guava-logo-google-plus-suite-png-image-high-quality.png' style={{ height: '50px' }} /><i className="bi bi-google me-4"></i>Continue with Google</button>
 
       </div>
 
