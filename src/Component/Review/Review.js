@@ -37,7 +37,7 @@ const Review = () => {
       <div className="d-flex justify-content-center align-items-center flex-wrap">
 
         <div className="container-fluid">
-          <div className="row">
+          <div className="row mb-3">
             <div className="col-md-4"></div>
 
             <div className="col-md-4">
@@ -69,7 +69,7 @@ const Review = () => {
 
 
 
-                        <div style={{ color: '#ff3700' }}>
+                        <div style={{ color: '#FF0044' }}>
 
                           {
 
@@ -78,7 +78,7 @@ const Review = () => {
                                 : reviewer.review === '3' ? <div><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
                                   : reviewer.review === '4' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
                                     : reviewer.review === '5' ? <div><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /><i class="fas fa-star" /> <i class="fas fa-star" /> </div>
-                                      : <p style={{ color: '#ff3700' }}>no review found </p>
+                                      : <p style={{ color: '#FF0044' }}>no review found </p>
 
                           }
                           {/* <div class="custom"></div> */}

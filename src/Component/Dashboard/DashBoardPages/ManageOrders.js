@@ -62,12 +62,12 @@ const ManageOrders = () => {
         }
       })
   }
-  let orderNo=1;
+  let orderNo = 1;
 
   return (
     <Dashboard>
       <div style={{ paddingTop: '10px', paddingBottom: '10px', backgroundColor: 'whitesmoke' }}>
-        <h1 className='text-center m-3' style={{ color: '#020f24', fontWeight: 'bold' }}> Manage All Booking </h1>
+        <h1 className='text-center m-3' style={{ color: '#020f24', fontWeight: 'bold' }}> Manage All Orders </h1>
         <Table className="w-100 m-auto text-center" striped bordered hover responsive style={{ color: '#020f24' }}>
           <thead>
             <tr>
@@ -80,10 +80,10 @@ const ManageOrders = () => {
             </tr>
           </thead>
           <tbody>
-           
-            {      
+
+            {
               allOrders.map((list) => (
-                <tr> 
+                <tr>
                   <td>{orderNo++}</td>
                   <td>{list.name}</td>
                   <td>{list.email}</td>
@@ -91,8 +91,8 @@ const ManageOrders = () => {
 
                   <td>{list.status}</td>
                   <td>
-                    <button className=" btn btn-danger" onClick={() => handleDelete(list._id)}>Cancel</button>
-                    <Link to={`/updateStatus/${list._id}`}  ><button className="btn btn-primary">Status</button> </Link>
+                    <button className=" btn btn-danger" onClick={() => handleDelete(list._id)} style={{ backgroundColor: '#FF0044', color: 'white' }}>Cancel</button>
+                    <Link to={`/updateStatus/${list._id}`}  ><button className="btn btn-primary update-btn" style={{ backgroundColor: '#004FF9', color: 'white' }}>Status</button> </Link>
 
                     {/* <button onClick={() => handleUpdateStatus(list._id)} className="btn btn-success ms-4"> Shipped</button> */}
                   </td>
@@ -108,7 +108,7 @@ const ManageOrders = () => {
                       </Button>
                     </Modal.Footer>
                   </Modal> */}
-                 
+
                 </tr>
               )).reverse()
             }

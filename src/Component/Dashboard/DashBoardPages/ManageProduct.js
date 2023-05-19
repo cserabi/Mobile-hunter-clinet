@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
 import { Modal, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Dashboard from '../Dashboard';
+import './ManageProduct.css';
 
 const ManageProduct = () => {
 
@@ -20,7 +20,7 @@ const ManageProduct = () => {
         setAllOrders(data)
       })
   }, [status]);
-  
+
 
   const modalShow = id => {
     setShow(true);
@@ -64,7 +64,7 @@ const ManageProduct = () => {
         }
       })
   }
-  let orderNo=1;
+  let orderNo = 1;
 
   return (
     <Dashboard>
@@ -76,27 +76,27 @@ const ManageProduct = () => {
               {/* <th>#</th> */}
               <th>Product No </th>
               <th>Name</th>
-              <th>Email</th>
+              <th>Picture</th>
               <th>Price</th>
               <th>Warranty</th>
-           
+
             </tr>
           </thead>
           <tbody>
-           
-            {      
+
+            {
               allOrders.map((list) => (
-                <tr> 
+                <tr>
                   <td>{orderNo++}</td>
                   <td>{list.Name}</td>
-                  <td>{list.email}</td>
+                  <td> <img src={list.piclink} style={{ width: '50px', height: '50px' }}></img></td>
                   <td>{list.price}</td>
                   <td>{list.warranty}</td>
 
-                  
+
                   <td>
-                    <button className=" btn btn-danger" onClick={() => handleDelete(list._id)}>Delete</button>
-                    <Link to={`/updateProduct/${list._id}`}  ><button className="btn btn-primary">Update</button> </Link>
+                    <button className=" btn btn-danger mr-4" onClick={() => handleDelete(list._id)} style={{ backgroundColor: '#FF0044', color: 'white' }}>Delete</button>
+                    <Link to={`/updateProduct/${list._id}`}  ><button className="btn btn-primary update-btn" style={{ backgroundColor: '#004FF9', color: 'white' }} >Update</button> </Link>
 
                     {/* <button onClick={() => handleUpdateStatus(list._id)} className="btn btn-success ms-4"> Shipped</button> */}
                   </td>
