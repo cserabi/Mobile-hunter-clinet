@@ -20,7 +20,7 @@ const Sidebar = () => {
 
         </div>}
 
-        {!admin && <div>
+        {admin && <div>
           <Nav.Link className='list-group-item' as={Link} to="/manageOrders">Manage All Orders</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/addProducts">Add a Products</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/manageProducts">Manage Products</Nav.Link>

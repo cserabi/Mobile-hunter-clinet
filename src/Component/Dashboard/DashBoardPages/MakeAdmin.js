@@ -13,6 +13,7 @@ const MakeAdmin = () => {
   }
   const handleSubmit = e => {
     const user = { email }
+    
     fetch('https://localhost:5000/users/admin', {
       method: 'PUT',
       headers: {
@@ -23,6 +24,7 @@ const MakeAdmin = () => {
     })
       .then(res => res.json())
       .then(data => {
+        alert("Successfully added admin ");
         setSuccess(true);
         setEmail('')
         console.log(data)
@@ -42,8 +44,8 @@ const MakeAdmin = () => {
 
           <input onBlur={handleOnblur} type="email" name="email" placeholder="write your new admin email" />
 
-          <input type="submit" />
-
+          <input type="submit" value="Submit" lassName="btn btn-primary btn-organization p-3"  />
+        
         </form>
 
 

@@ -6,12 +6,12 @@ import useAuth from '../Hook/useAuth';
 
 
 const AdminRoute = ({ children, ...rest }) => {
-  const { user } = useAuth();
+  const { user,admin } = useAuth();
 
   return (
     <Route
       {...rest}
-      render={({ location }) => user?.email ? children : <Redirect
+      render={({ location }) => admin?.email ? children : <Redirect
         to={{
           pathname: "/login",
           state: { from: location }
