@@ -31,7 +31,7 @@ const MyOrder = () => {
   useEffect(() => {
     const ownOrder = orders.filter(order => order.email === user?.email);
     setMyOrders(ownOrder);
-  })
+  },[orders])
 
 
 
@@ -81,19 +81,25 @@ const MyOrder = () => {
                   <h5 className="card-title">{mybook.name}</h5>
                   {/* <h5>Email: {mybook.email}</h5> */}
 
-                  <p>Orders Id: {mybook._id}</p>
-                  <p>Phone Number : {mybook.Phone}</p>
-                  <p className="card-text">Address: {mybook.Address}</p>
+                     <br/>
+                  
+
+                  <p className='card-text'><b>Orders Id:</b> {mybook._id}</p>
+                  <p className='card-text'><b>Device Name: </b>{mybook.deviceName}</p>
+
+                  <p className='card-text'><b>Product Price</b> : {mybook.price}</p>
+                  {/* <p className="card-text">Address: {mybook.Address}</p> */}
 
 
-                  <p className="card-text"> Booking Date: {mybook.date}</p>
+                  {/* <p className="card-text"> Booking Date: {mybook.date}</p> */}
 
                   {/* {mybook.status === 'pending'} */}
 
-                  <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary">Delivery Status</button> </Link>
+                 
                   <p>Status: {mybook.status}</p>
                   <div className="">
-                    <button onClick={() => handleDelete(mybook._id)} className="me-5 btn btn-primary">Cancel Orders</button>
+                  <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary"> Status</button> </Link>
+                    <button onClick={() => handleDelete(mybook._id)} className="me-5 btn btn-primary">Cancel </button>
                     <button className="me-5 btn btn-pay" >Pay</button>
                   </div>
                 </div>

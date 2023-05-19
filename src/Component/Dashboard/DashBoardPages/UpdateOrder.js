@@ -38,7 +38,7 @@ const UpdateOrder = () => {
     const warranty = warrantyRef.current.value;
     const piclink = piclinkRef.current.value;
     const newProduct = { Name, des, price, warranty,piclink };
-    console.log(newProduct);
+    // console.log(newProduct);
 
     fetch(`http://localhost:5000/manageProducts/${productId}`, {
       method: "PUT",
@@ -51,7 +51,7 @@ const UpdateOrder = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("successfully update new product");
+          alert("successfully update  product Information");
           e.target.reset();
         } else {
           alert("failed to update product");

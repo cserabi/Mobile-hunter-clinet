@@ -24,15 +24,15 @@ const MiddleStatus = ({data}) => {
       )
   }, []);
   
+  
        
   useEffect(()=>{
     const updateStatus=status.filter(order=> order.phone === data)
     setNewStatus(updateStatus);
 
-  })
- 
+  },[status])
 
-  
+
 
   
 
