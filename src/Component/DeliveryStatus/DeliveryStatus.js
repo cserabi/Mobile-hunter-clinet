@@ -102,7 +102,7 @@ const DeliveryStatus = () => {
           <button className="btn btn-primary"> Middle Status</button>{" "}
         </Link> */}
 
-        <MiddleStatus data={SingleOrder?.Phone}></MiddleStatus>
+
         <div className="col-md-2"></div>
       </div>
       <div className="row">
@@ -127,13 +127,24 @@ const DeliveryStatus = () => {
               </tr>
             </thead>
 
-          
+
           </Table>
         </div>
-       
 
-       
+        <div className="col-md-2">
+
+        </div>
+
+
+
       </div>
+
+      <div className="row">
+
+        <div className=""><MiddleStatus data={SingleOrder?.Phone}></MiddleStatus></div>
+
+      </div>
+
     </div>
   );
 };

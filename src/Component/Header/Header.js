@@ -18,7 +18,7 @@ const Header = () => {
 
     <Navbar collapseOnSelect expand="lg" className="header-container bg-color-design" sticky="top">
       <Container >
-        <Navbar.Brand href="#home"><img style={{ width: '60px' }} src="https://i.postimg.cc/1zfprb1H/Mobile-Hunter-logo.png" alt="" /></Navbar.Brand>
+        <Navbar.Brand href="#home"><img style={{ width: '120px', marginTop: '-5px' }} src="https://i.postimg.cc/8P39HX3d/Techmart-logo-update.png" alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">

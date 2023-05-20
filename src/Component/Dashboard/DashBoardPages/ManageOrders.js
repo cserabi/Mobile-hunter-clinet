@@ -74,7 +74,8 @@ const ManageOrders = () => {
               {/* <th>#</th> */}
               <th>Order No </th>
               <th>Name</th>
-              <th>Email</th>
+
+              <th>Date</th>
               <th>Mobile</th>
               <th>Status</th>
             </tr>
@@ -86,7 +87,8 @@ const ManageOrders = () => {
                 <tr>
                   <td>{orderNo++}</td>
                   <td>{list.name}</td>
-                  <td>{list.email}</td>
+
+                  <td>{list.date}</td>
                   <td>{list.Phone}</td>
 
                   <td>{list.status}</td>

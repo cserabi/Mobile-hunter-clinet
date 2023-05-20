@@ -12,6 +12,7 @@ const UpdateStatus = () => {
   const lastStatus = useRef();
   const vehicleName = useRef();
   const phoneNo = useRef();
+  const MnfSerialNo = useRef();
 
   const handleAddUser = e => {
 
@@ -19,9 +20,10 @@ const UpdateStatus = () => {
     const last = lastStatus.current.value;
     const vehicle = vehicleName.current.value;
     const phone = phoneNo.current.value;
+    const MnfSLNo = MnfSerialNo.current.value;
 
-    const updateInfo = { date, last, vehicle, phone }
-          
+    const updateInfo = { date, last, vehicle, phone, MnfSLNo }
+
 
 
     fetch(`http://localhost:5000/status/${statusId}`, {
@@ -70,6 +72,16 @@ const UpdateStatus = () => {
                 <Form.Control
                   id="floatingPasswordCustom"
                   type="text"
+                  placeholder="Si no "
+                  ref={phoneNo}
+                  required
+                />
+                <label htmlFor="floatingPasswordCustom">Phone  No</label>
+              </Form.Floating>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingPasswordCustom"
+                  type="text"
                   placeholder="Last Status"
                   ref={lastStatus}
                   required
@@ -86,16 +98,18 @@ const UpdateStatus = () => {
                 />
                 <label htmlFor="floatingPasswordCustom">Vehicle Name</label>
               </Form.Floating>
+
               <Form.Floating className="mb-3">
                 <Form.Control
                   id="floatingPasswordCustom"
                   type="text"
                   placeholder="Si no "
-                  ref={phoneNo}
+                  ref={MnfSerialNo}
                   required
                 />
-                <label htmlFor="floatingPasswordCustom">Phone  No</label>
+                <label htmlFor="floatingPasswordCustom">Mnf/SL NO</label>
               </Form.Floating>
+
 
               <input type="submit" value="Update" className="btn btn-primary btn-organization p-3 w-100 mb-3 bookbtn" />
             </Form>

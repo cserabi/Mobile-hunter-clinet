@@ -26,12 +26,12 @@ const MyOrder = () => {
       }
       )
   }, [])
-  
+
 
   useEffect(() => {
     const ownOrder = orders.filter(order => order.email === user?.email);
     setMyOrders(ownOrder);
-  },[orders])
+  }, [orders])
 
 
 
@@ -81,8 +81,8 @@ const MyOrder = () => {
                   <h5 className="card-title">{mybook.name}</h5>
                   {/* <h5>Email: {mybook.email}</h5> */}
 
-                     <br/>
-                  
+                  <br />
+
 
                   <p className='card-text'><b>Orders Id:</b> {mybook._id}</p>
                   <p className='card-text'><b>Device Name: </b>{mybook.deviceName}</p>
@@ -95,12 +95,12 @@ const MyOrder = () => {
 
                   {/* {mybook.status === 'pending'} */}
 
-                 
+
                   <p>Status: {mybook.status}</p>
                   <div className="">
-                  <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary"> Status</button> </Link>
+                    <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary"> Status</button> </Link>
                     <button onClick={() => handleDelete(mybook._id)} className="me-5 btn btn-primary">Cancel </button>
-                    <button className="me-5 btn btn-pay" >Pay</button>
+                    <Link to='/ssl-request'><button className="me-5 btn btn-pay" >Pay</button></Link>
                   </div>
                 </div>
                 {/* <div>

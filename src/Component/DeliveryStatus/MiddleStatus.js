@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
- import    "./MiddleStatus.css";
-import { Spinner } from 'react-bootstrap';
- 
+import "./MiddleStatus.css";
+import { Spinner, Table } from 'react-bootstrap';
 
-const MiddleStatus = ({data}) => {
+
+const MiddleStatus = ({ data }) => {
 
 
   const [status, setStatus] = useState([]);
-  const [newStatus,setNewStatus]=useState([]);
- 
+  const [newStatus, setNewStatus] = useState([]);
+
   const { middleId } = useParams();
   // console.log(middleId);
   const [spinner, setSpinner] = useState(true);
@@ -23,67 +23,92 @@ const MiddleStatus = ({data}) => {
       }
       )
   }, []);
-  
-  
-       
-  useEffect(()=>{
-    const updateStatus=status.filter(order=> order.phone === data)
+
+
+
+  useEffect(() => {
+    const updateStatus = status.filter(order => order.phone === data)
     setNewStatus(updateStatus);
 
-  },[status])
+  }, [status])
 
 
 
-  
 
- 
+
+
 
   return (
     <div>
-<div className="overflow-x-auto margin-0-auto">
-  <table className="table w-75 text-center">
-    {/* head */}
-    <thead>
-      <tr>
-        <th></th>
-        <th>Date</th>
-        <th>Location</th>
-        <th>Vehicle</th>
-       
+      <div className="container">
+        <div className="row">
+          <div className="col-md-2"></div>
 
-      </tr>
-    </thead>
-
-        {
-            spinner && <Spinner  />
-          }
-     
-        {
-          newStatus.map(item=><div className='col' key={item._id}>
-
-            <tbody className="table w-75 text-center">
-          
-            <tr>
-            
-              <td>{item.date}</td>
-              <td>{item.last}</td>
-              <td>{item.vehicle}</td>
-             
-            </tr>
-          </tbody>
-
-          </div>)
-       
-
-    
-    }
-
-    
-  </table>
-</div>
+          <div className="col-md-8">
+            <Table className="  text-center">
 
 
-    </div>
+              <thead>
+                <tr>
+                  {/* <th>#</th> */}
+                  <th>Date </th>
+                  <th>Last Status</th>
+
+                  <th>Vehicle</th>
+                  <th>Mnf./SL No.</th>
+
+                </tr>
+              </thead>
+            </Table>
+            {
+              spinner && <Spinner />
+            }
+
+            {
+
+
+              newStatus.map(item => <div className='' key={item._id}>
+
+                <Table>
+
+
+                  <tbody className="text-center margin-item">
+
+
+
+                    <tr>
+
+                      <td className='margin-item ' >{item.date}</td>
+                      <td className='margin-item' >{item.last}</td>
+                      <td className='margin-item' >{item.vehicle}</td>
+                      <td className='margin-item' >{item.MnfSLNo}</td>
+
+                    </tr>
+                  </tbody>
+                </Table>
+
+
+
+              </div>)
+
+
+
+            }
+
+
+
+
+
+
+          </div>
+
+          <div className="col-md-2">
+
+          </div>
+        </div>
+      </div>
+
+    </div >
   )
 }
 

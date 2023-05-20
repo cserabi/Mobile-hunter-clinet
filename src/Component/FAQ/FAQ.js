@@ -15,9 +15,9 @@ const FAQ = () => {
 
           <Accordion defaultActiveKey="0" flush>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Which service provide mobile hunter agency ? </Accordion.Header>
+              <Accordion.Header>Which service provide TechMart ? </Accordion.Header>
               <Accordion.Body>
-                Mainly we are Mobile selling agency .We focus on selling Smart phone.
+                Mainly we are Mobile selling E-commerce platform .We focus on selling Smart phone.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
@@ -30,7 +30,7 @@ const FAQ = () => {
             <Accordion.Item eventKey="2">
               <Accordion.Header>How much will be delivery charge per product? </Accordion.Header>
               <Accordion.Body>
-                We will take delivery charge 5$ per product .you can receive product from any where.
+                We will take delivery charge 150 tk per product .you can receive product from any where in bangladesh.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

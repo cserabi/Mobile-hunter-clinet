@@ -1,5 +1,5 @@
-table{
-
-    margin:0 auto;
-    width: 300px;
+.margin-item {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
