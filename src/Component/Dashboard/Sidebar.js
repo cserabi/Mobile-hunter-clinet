@@ -21,6 +21,9 @@ const Sidebar = () => {
         </div>}
 
         {admin && <div>
+          <Nav.Link className='list-group-item' as={Link} to="/myorder">My Orders</Nav.Link>
+          <Nav.Link className='list-group-item' as={Link} to="/addreview">Add Review</Nav.Link>
+          <Nav.Link className='list-group-item' as={Link} to="/pay">Pay</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/manageOrders">Manage All Orders</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/addProducts">Add a Products</Nav.Link>
           <Nav.Link className='list-group-item' as={Link} to="/manageProducts">Manage Products</Nav.Link>

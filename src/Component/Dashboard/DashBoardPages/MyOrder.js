@@ -4,6 +4,7 @@ import Dashboard from '../Dashboard';
 import useAuth from '../../Hook/useAuth';
 import './MyOrder.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const MyOrder = () => {
 
@@ -15,6 +16,11 @@ const MyOrder = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+  function paymentMethod(myBook) {
+    console.log("click");
+  }
 
 
   useEffect(() => {
@@ -66,7 +72,6 @@ const MyOrder = () => {
 
 
 
-
   return (
     <Dashboard>
       <div className='container'>
@@ -98,9 +103,9 @@ const MyOrder = () => {
 
                   <p>Status: {mybook.status}</p>
                   <div className="">
-                    <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary"> Status</button> </Link>
-                    <button onClick={() => handleDelete(mybook._id)} className="me-5 btn btn-primary">Cancel </button>
-                    <Link to='/ssl-request'><button className="me-5 btn btn-pay" >Pay</button></Link>
+                    <Link to={`/deliverystatus/${mybook._id}`}  ><button className="btn btn-primary btn-distance"> Status</button> </Link>
+                    <button onClick={() => handleDelete(mybook._id)} className="me-5 btn btn-primary btn-distance">Cancel </button>
+
                   </div>
                 </div>
                 {/* <div>

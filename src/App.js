@@ -28,6 +28,7 @@ import Productadd from './Component/Productadd';
 import Purchase from './Component/Purchase/Purchase';
 import Review from './Component/Review/Review';
 import UpdateOrder from './Component/Dashboard/DashBoardPages/UpdateOrder';
+import PaySuccess from './Component/Payment/PaySuccess';
 
 function App() {
   return (
@@ -93,6 +94,11 @@ function App() {
 
             <Route path="/manageOrders">
               <ManageOrders></ManageOrders>
+            </Route>
+
+            <Route path="/ssl-payment-success">
+              <PaySuccess></PaySuccess>
+
             </Route>
             <Route path="/updateProduct/:productId">
               <UpdateOrder></UpdateOrder>
