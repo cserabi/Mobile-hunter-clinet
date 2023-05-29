@@ -1,0 +1,21 @@
+.bg-custom-box {
+  background-color: #FF0044;
+  color: white;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bg-custom-box-cancel {
+
+  background-color: white;
+  color: #FF0044;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}

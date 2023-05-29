@@ -82,7 +82,7 @@ const Pay = () => {
                   <p>Status: {mybook.status}</p>
                   <div className="">
 
-                    <button className="me-5 btn btn-pay w-50" onClick={() => paymentMethod(mybook)} >Pay</button>
+                    <button className="me-5 btn btn-pay w-50" onClick={() => paymentMethod(mybook)}  >Pay</button>
                   </div>
                 </div>
                 {/* <div>
